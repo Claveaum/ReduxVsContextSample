@@ -1,32 +1,32 @@
-import { Card, Col, Row } from "antd";
+import { Col, Row } from "antd";
+import { ColorContextProvider } from "./ColorContext";
+import { ColorPicker } from "./ColorPicker";
+import "./exemple1.css";
+import { HexViewer } from "./HexViewer";
+import { RgbViewer } from "./RgbViewer";
+import { VisualViewer } from "./VisualViewer";
 
-import "./exemple2.css"
-
-const exemple2 = () => {
+const Exemple2 = () => {
   return (
-    <>
-      <Row className="exemple2-first-line">
+    <ColorContextProvider>
+      <Row className="exemple1-first-line">
         <Col span={12}>
-          <Card title="Composant 1" className="exemple2-card">Sample 1</Card>
+          <ColorPicker />
         </Col>
         <Col span={12}>
-          <Card title="Composant 2" className="exemple2-card">Sample 2</Card>
+          <HexViewer />
         </Col>
       </Row>
       <Row>
         <Col span={12}>
-          <Card title="Composant 3" className="exemple2-card">
-            Sample 3
-          </Card>
+          <VisualViewer />
         </Col>
         <Col span={12}>
-          <Card title="Composant 4" className="exemple2-card">
-            Sample 4
-          </Card>
+          <RgbViewer />
         </Col>
       </Row>
-    </>
+    </ColorContextProvider>
   );
 };
 
-export default exemple2;
+export default Exemple2;
