@@ -1,32 +1,34 @@
-import { Card, Col, Row } from "antd";
+import { Col, Row } from "antd";
+import { useState } from "react";
+import { BottomLeft } from "./bottomLeft";
+import { BottomRight } from "./bottomRight";
+import "./exemple1.css";
+import { TopLeft } from "./topLeft";
+import { TopRight } from "./topRight";
 
-import "./exemple1.css"
+const Exemple1 = () => {
+  const [color, setColor] = useState("#aabbcc");
 
-const exemple1 = () => {
   return (
     <>
       <Row className="exemple1-first-line">
         <Col span={12}>
-          <Card title="Composant 1" className="exemple1-card">Sample 1</Card>
+          <TopLeft color={color} setColor={setColor} />
         </Col>
         <Col span={12}>
-          <Card title="Composant 2" className="exemple1-card">Sample 2</Card>
+          <TopRight color={color} />
         </Col>
       </Row>
       <Row>
         <Col span={12}>
-          <Card title="Composant 3" className="exemple1-card">
-            Sample 3
-          </Card>
+          <BottomLeft color={color} />
         </Col>
         <Col span={12}>
-          <Card title="Composant 4" className="exemple1-card">
-            Sample 4
-          </Card>
+          <BottomRight color={color} />
         </Col>
       </Row>
     </>
   );
 };
 
-export default exemple1;
+export default Exemple1;
