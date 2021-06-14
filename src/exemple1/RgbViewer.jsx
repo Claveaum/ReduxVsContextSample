@@ -1,6 +1,6 @@
 import { Card } from "antd";
 
-export function BottomRight({ color }) {
+export function RgbViewer({ color }) {
   const rgb = hexToRgb(color)
   return (
     <Card title="Couleur choisie (rgb)" className="exemple1-card">

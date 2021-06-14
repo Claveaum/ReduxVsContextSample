@@ -1,10 +1,10 @@
 import { Col, Row } from "antd";
 import { useState } from "react";
-import { BottomLeft } from "./bottomLeft";
-import { BottomRight } from "./bottomRight";
+import { ColorPicker } from "./ColorPicker";
 import "./exemple1.css";
-import { TopLeft } from "./topLeft";
-import { TopRight } from "./topRight";
+import { HexViewer } from "./HexViewer";
+import { RgbViewer } from "./RgbViewer";
+import { VisualViewer } from "./VisualViewer";
 
 const Exemple1 = () => {
   const [color, setColor] = useState("#aabbcc");
@@ -13,18 +13,18 @@ const Exemple1 = () => {
     <>
       <Row className="exemple1-first-line">
         <Col span={12}>
-          <TopLeft color={color} setColor={setColor} />
+          <ColorPicker color={color} setColor={setColor} />
         </Col>
         <Col span={12}>
-          <TopRight color={color} />
+          <HexViewer color={color} />
         </Col>
       </Row>
       <Row>
         <Col span={12}>
-          <BottomLeft color={color} />
+          <VisualViewer color={color} />
         </Col>
         <Col span={12}>
-          <BottomRight color={color} />
+          <RgbViewer color={color} />
         </Col>
       </Row>
     </>
