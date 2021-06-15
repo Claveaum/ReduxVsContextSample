@@ -27,6 +27,7 @@ function colorReducer(state, action) {
 export function ColorContextProvider({ children, defaultColor = "#aabbcc" }) {
   const [color, dispatch] = useReducer(colorReducer, defaultColor);
 
+  // Action Creators
   const setColor = useCallback(
     (color) => dispatch({ type: SET_COLOR, color }),
     [dispatch]
@@ -40,9 +41,12 @@ export function ColorContextProvider({ children, defaultColor = "#aabbcc" }) {
     [dispatch]
   );
 
+  // Selectors
+  const getRgb = useCallback(() => Color(color).rgb().array(), [color]);
+
   const contextValue = useMemo(
-    () => ({ color, setColor, lighten, darken }),
-    [color, darken, lighten, setColor]
+    () => ({ color, setColor, lighten, darken, getRgb }),
+    [color, darken, lighten, setColor, getRgb]
   );
 
   return (
