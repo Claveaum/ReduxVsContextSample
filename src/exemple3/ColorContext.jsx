@@ -1,10 +1,5 @@
 import Color from "color";
-import {
-  createContext,
-  useCallback,
-  useMemo,
-  useReducer
-} from "react";
+import { createContext, useCallback, useMemo, useReducer } from "react";
 
 export const ColorContext = createContext({});
 
@@ -29,8 +24,8 @@ function colorReducer(state, action) {
   }
 }
 
-export function ColorContextProvider({ children }) {
-  const [color, dispatch] = useReducer(colorReducer, "#aabbcc");
+export function ColorContextProvider({ children, defaultColor = "#aabbcc" }) {
+  const [color, dispatch] = useReducer(colorReducer, defaultColor);
 
   const setColor = useCallback(
     (color) => dispatch({ type: SET_COLOR, color }),

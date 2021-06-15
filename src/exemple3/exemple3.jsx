@@ -8,7 +8,7 @@ import { VisualViewer } from "./VisualViewer";
 
 const Exemple3 = () => {
   return (
-    <ColorContextProvider>
+    <ColorContextProvider defaultColor="#ccbbaa">
       <Row className="exemple1-first-line">
         <Col span={12}>
           <ColorPicker />
