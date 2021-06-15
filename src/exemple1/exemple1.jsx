@@ -1,7 +1,6 @@
 import { Col, Row } from "antd";
 import { useState } from "react";
 import { ColorPicker } from "./ColorPicker";
-import "./exemple1.css";
 import { HexViewer } from "./HexViewer";
 import { RgbViewer } from "./RgbViewer";
 import { VisualViewer } from "./VisualViewer";
@@ -11,7 +10,7 @@ const Exemple1 = () => {
 
   return (
     <>
-      <Row className="exemple1-first-line">
+      <Row className="exemple-first-line">
         <Col span={12}>
           <ColorPicker color={color} setColor={setColor} />
         </Col>

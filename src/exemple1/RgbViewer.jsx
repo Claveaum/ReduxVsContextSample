@@ -3,7 +3,7 @@ import { Card } from "antd";
 export function RgbViewer({ color }) {
   const rgb = hexToRgb(color)
   return (
-    <Card title="Couleur choisie (rgb)" className="exemple1-card">
+    <Card title="Couleur choisie (rgb)" className="example-card">
       <ul>
         <li>Rouge: {rgb.r}</li>
         <li>Vert: {rgb.g}</li>

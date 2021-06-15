@@ -4,7 +4,6 @@ import {
   Switch,
   useHistory,
 } from "react-router-dom";
-import "./App.css";
 import Exemple1 from "./exemple1/exemple1";
 import Exemple2 from "./exemple2/exemple2";
 import Exemple3 from "./exemple3/exemple3";

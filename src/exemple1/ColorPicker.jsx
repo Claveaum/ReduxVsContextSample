@@ -3,7 +3,7 @@ import { HexColorPicker } from "react-colorful";
 
 export function ColorPicker({ color, setColor }) {
   return (
-    <Card title="Choisir une couleur" className="exemple1-card">
+    <Card title="Choisir une couleur" className="example-card">
       <HexColorPicker color={color} onChange={setColor} />
     </Card>
   );

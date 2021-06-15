@@ -7,7 +7,7 @@ export function ColorPicker() {
   const { color, setColor } = useContext(ColorContext);
 
   return (
-    <Card title="Choisir une couleur" className="exemple1-card">
+    <Card title="Choisir une couleur" className="example-card">
       <HexColorPicker color={color} onChange={setColor} />
     </Card>
   );

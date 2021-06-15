@@ -6,7 +6,7 @@ export function VisualViewer() {
   const { color, lighten, darken } = useContext(ColorContext);
 
   return (
-    <Card title="Couleur choisie (visuel)" className="exemple1-card">
+    <Card title="Couleur choisie (visuel)" className="example-card">
       <div
         style={{
           display: "flex",

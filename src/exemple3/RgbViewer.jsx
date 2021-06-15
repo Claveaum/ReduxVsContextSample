@@ -7,7 +7,7 @@ export function RgbViewer() {
 
   const [r, g, b] = getRgb();
   return (
-    <Card title="Couleur choisie (rgb)" className="exemple1-card">
+    <Card title="Couleur choisie (rgb)" className="example-card">
       <ul>
         <li>Rouge: {r}</li>
         <li>Vert: {g}</li>
